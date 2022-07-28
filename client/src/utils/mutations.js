@@ -61,7 +61,7 @@ export const ADD_USER = gql`
 `;
 
 // mutation to save recipes
-export const SAVE_Recipe = gql`
+export const SAVE_RECIPES = gql`
     mutation saveRecipe($input: recipeInput!) {
         saveRecipe(input: $input) {
             _id

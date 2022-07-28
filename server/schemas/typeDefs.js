@@ -14,8 +14,8 @@ const typeDefs = gql`
     type Recipe{
         recipeId: String
         title: String
-        cuisines: String
-        extendedIngredients: String
+        cuisines: [String]
+        extendedIngredients: [String]
         summary: String
         instructions: String
         vegetarian: Boolean
@@ -28,8 +28,8 @@ const typeDefs = gql`
     input recipeInput{
         recipeId: String
         title: String
-        cuisines: String
-        extendedIngredients: String
+        cuisines: [String]
+        extendedIngredients: [String]
         summary: String
         instructions: String
         vegetarian: Boolean

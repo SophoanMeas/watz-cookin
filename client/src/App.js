@@ -8,9 +8,12 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import SearchRecipes from './pages/SearchRecipes';
+import { ThemeProvider } from 'styled-components';
+
+import SearchRecipes from './pages/SearchRecipes/SearchRecipes';
 import SavedRecipes from './pages/SavedRecipes';
-import Navbar from './components/Navbar';
+import FoodDetail from './pages/Detail/FoodDetail';
+import Navbar from './components/Navbar/Navbar';
 import NoMatch from './pages/NoMatch';
 
 const httpLink = createHttpLink({
@@ -33,17 +36,38 @@ const client = new ApolloClient({
   persistedQueries: false
 });
 
+const theme = {
+    colors: {
+      background: '#d1a382',
+      mainBg: '#ffc237',
+      header: 'background:linear-gradient(135deg, #fad961 0%,#f76b1c 100%);',
+      activeNavLink: '#594333',
+      hero: '#1b3025',
+      footer: '#35347f',
+      fontColor: '#ffff',
+      pBgColor: '#000000',
+      sBgColor: '#525073',
+      pColor: '#93939d',
+      sColor: '#f3f6f6',
+      hoverColor: '#594333'
+    },
+  };
+
 function App() {
   return (
     <ApolloProvider client={client}>
+         <ThemeProvider theme={theme}>
     <Router>
         <Navbar />
         <Routes>
           <Route path='/' element={<SearchRecipes/>} />
           <Route path='/saved' element={<SavedRecipes/>} />
+          <Route path='/recipe/:id' element={<FoodDetail />} />
           <Route path='*' element={<NoMatch />} />
         </Routes>
+        <Footer/>
     </Router>
+    </ThemeProvider>
     </ApolloProvider>
   );
 }

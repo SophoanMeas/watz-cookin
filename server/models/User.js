@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-// import schema from Recipe.js
+
 const recipeSchema = require('./Recipe');
 
 const userSchema = new Schema(
