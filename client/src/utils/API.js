@@ -55,12 +55,12 @@ export const deleteRecipe = (recipeId, token) => {
 export const searchFoodRecipe = (query) => {
   // return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
   return fetch(
-    `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${query}&number=30`
+    `https://api.spoonacular.com/recipes/complexSearch?apiKey=c289239965e7409d875f738e568ecdb1&query=${query}&number=30`
   );
 };
 
 export const searchFoodDetail = (id) => {
   return fetch(
-    `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_API_KEY}`
+    `https://api.spoonacular.com/recipes/${id}/information?apiKey=c289239965e7409d875f738e568ecdb1`
   );
 };
