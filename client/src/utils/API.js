@@ -29,7 +29,7 @@ export const loginUser = (userData) => {
 };
 
 // save book data for a logged in user
-export const saveBook = (recipeData, token) => {
+export const saveRecipe = (recipeData, token) => {
   return fetch('/api/users', {
     method: 'PUT',
     headers: {
@@ -41,7 +41,7 @@ export const saveBook = (recipeData, token) => {
 };
 
 // remove saved book data for a logged in user
-export const deleteBook = (recipeId, token) => {
+export const deleteRecipe = (recipeId, token) => {
   return fetch(`/api/users/recipe/${recipeId}`, {
     method: 'DELETE',
     headers: {
@@ -55,7 +55,7 @@ export const deleteBook = (recipeId, token) => {
 export const searchFoodRecipe = (query) => {
   // return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
   return fetch(
-    `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${query}&number=10`
+    `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${query}&number=30`
   );
 };
 

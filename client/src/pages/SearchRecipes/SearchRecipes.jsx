@@ -56,34 +56,6 @@ export default function SearchRecipes() {
           console.error(err);
         }
       };
-
-    // create function to handle saving a recipe to our database
-  //  const handleSaveBook = async (recipeId) => {
-  //   const recipeInput = searchedRecipes.find((recipe) => recipe.recipeId === recipeId);
-
-  //   // get token
-  //   const token = Auth.loggedIn() ? Auth.getToken() : null;
-
-  //   if (!token) {
-  //     return false;
-  //   }
-
-  //   try {
-  //     const { data } = await saveRecipe({
-  //       variables: { input: recipeInput }
-  //     });
-
-  //     if (error) {
-  //       console.log(data)
-  //       throw new Error('something went wrong!');
-  //     }
-
-  //     // if book successfully saves to user's account, save book id to state
-  //     setSavedRecipeIds([...savedRecipeIds, recipeInput.recipeId]);
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
     
   return (
    <MainWrapper>
@@ -125,10 +97,6 @@ export default function SearchRecipes() {
         );
       })}
     </Grid>
-
-      <Wave src={wave}>
-      </Wave>
-    
    </MainWrapper>
   )
 }

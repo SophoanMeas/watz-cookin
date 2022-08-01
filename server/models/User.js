@@ -5,16 +5,6 @@ const recipeSchema = require('./Recipe');
 
 const userSchema = new Schema(
   {
-    firstName: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    lastName: {
-      type: String,
-      required: true,
-      unique: true,
-    },
     username: {
       type: String,
       required: true,
@@ -56,7 +46,7 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 // when we query a user, we'll also get another field called `recipeCount` with the number of saved recipes we have
-userSchema.virtual('recipesCount').get(function () {
+userSchema.virtual('recipeCount').get(function () {
   return this.savedRecipes.length;
 });
 
