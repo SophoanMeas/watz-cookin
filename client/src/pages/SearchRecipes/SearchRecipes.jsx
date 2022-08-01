@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import { FaSearch } from 'react-icons/fa';
 import Auth from '../../utils/auth';
-import { searchFoodRecipe } from '../../utils/API';
+// import { searchFoodRecipe } from '../../utils/API';
 import { saveRecipeIds, getSavedRecipeIds } from '../../utils/localStorage';
 import { useMutation } from '@apollo/client';
 import { SAVE_RECIPES } from '../../utils/mutations';
@@ -34,7 +34,7 @@ export default function SearchRecipes() {
         }
    
         try {
-          const response = await searchFoodRecipe(searchInput);
+          const response = await fetch(`https://api.spoonacular.com/recipes/${searchInput}/information?apiKey=c289239965e7409d875f738e568ecdb1`);
     
           if (!response.ok) {
             throw new Error('something went wrong!');
