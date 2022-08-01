@@ -8,7 +8,6 @@ import {
     LogoIcon,
     NavbarContainer,
     NavList,
-    HamburgerIcon,
     NavMenu,
     NavItems,
     LogoName,
