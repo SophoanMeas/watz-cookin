@@ -29,7 +29,11 @@ export default function Header() {
        <LogoName  as={Link} to='/'>
         <LogoIcon src={Logo}></LogoIcon>
       </LogoName>
-     
+      {Auth.loggedIn() ? (
+             <h1>Welcome! You can add to favorites</h1>
+              ) : (
+              <h1></h1>
+              )}
                     <NavList>
                    <NavMenu>
                    <NavItems to='/'>Home</NavItems>
