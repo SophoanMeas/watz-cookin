@@ -34,7 +34,7 @@ export default function SearchRecipes() {
         }
    
         try {
-          const response = await fetch(`https://api.spoonacular.com/recipes/${searchInput}/information?apiKey=c289239965e7409d875f738e568ecdb1`);
+          const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=c289239965e7409d875f738e568ecdb1&query=${searchInput}&number=30`);
     
           if (!response.ok) {
             throw new Error('something went wrong!');
