@@ -35,7 +35,7 @@ export default function FoodDetail() {
 
   const getRecipes = async () => {
     try {
-      const response = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=c289239965e7409d875f738e568ecdb1`);
+      const response = await fetch(`https://api.spoonacular.com/recipes/${params.id}/information?apiKey=c289239965e7409d875f738e568ecdb1`);
 
       if (!response.ok) {
         throw new Error('something went wrong!');
