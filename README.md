@@ -1,4 +1,4 @@
-<h1 align="center">Book Search Engine </h1>
+<h1 align="center">Watz Cookin </h1>
 
 ---
 ![License Badge](https://img.shields.io/github/license/sophoanMeas/professional-readme-generator?&logo=GNU)
@@ -7,7 +7,7 @@
 
 # Description
 
-Watz-Cookin-N is an application where users are able to find a large variety based on different factors. Follow along as we develop this tasty app.
+Watz-Cookin is an application where users are able to find a large variety based on different factors. Follow along as we develop this tasty app.
 
 # Table of Contents
 
